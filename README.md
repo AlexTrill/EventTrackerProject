@@ -2,7 +2,7 @@
 ## Project Description
 This is a work in progress REST application with basic CRUD functionality.
 
-##Rest Route URI's
+## Rest Route URI's
 -  GET http://localhost:8082/api/index (returns a all of the current chess openings in the database)
 
 - POST http://localhost:8082/api/openings (allows you to create a new opening and add it to the database)

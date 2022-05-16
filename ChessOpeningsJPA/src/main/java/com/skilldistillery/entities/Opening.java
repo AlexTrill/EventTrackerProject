@@ -27,6 +27,8 @@ public class Opening {
 	@Column(name = "image_url")
 	String imageUrl;
 	
+	Boolean common;
+	
 	public Opening() {
 		
 	}
@@ -79,15 +81,23 @@ public class Opening {
 		this.imageUrl = imageUrl;
 	}
 
+	public Boolean getCommon() {
+		return common;
+	}
+
+	public void setCommon(Boolean common) {
+		this.common = common;
+	}
+
 	@Override
 	public String toString() {
 		return "Opening [id=" + id + ", name=" + name + ", pieceColor=" + pieceColor + ", tutorialLink=" + tutorialLink
-				+ ", type=" + type + ", imageUrl=" + imageUrl + "]";
+				+ ", type=" + type + ", imageUrl=" + imageUrl + ", common=" + common + "]";
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, imageUrl, name, pieceColor, tutorialLink, type);
+		return Objects.hash(common, id, imageUrl, name, pieceColor, tutorialLink, type);
 	}
 
 	@Override
@@ -99,9 +109,9 @@ public class Opening {
 		if (getClass() != obj.getClass())
 			return false;
 		Opening other = (Opening) obj;
-		return id == other.id && Objects.equals(imageUrl, other.imageUrl) && Objects.equals(name, other.name)
-				&& Objects.equals(pieceColor, other.pieceColor) && Objects.equals(tutorialLink, other.tutorialLink)
-				&& Objects.equals(type, other.type);
+		return Objects.equals(common, other.common) && id == other.id && Objects.equals(imageUrl, other.imageUrl)
+				&& Objects.equals(name, other.name) && Objects.equals(pieceColor, other.pieceColor)
+				&& Objects.equals(tutorialLink, other.tutorialLink) && Objects.equals(type, other.type);
 	}
 
 }

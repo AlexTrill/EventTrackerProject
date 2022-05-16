@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Chess Openings</title>
+<script type="text/javascript" src="js/eventFunctions.js"></script>
+</head>
+<body>
+	<h1>Chess Openings</h1>
+
+
+	<form name="openingForm">
+		<input type="number" name="openingId">
+		<button name="lookup">Find an Opening by Id</button>
+	</form>
+	<div id="output">
+		
+		<div id="openingData"></div>
+		
+	</div>
+
+
+
+	<h1>Create An Opening:</h1>
+	<form name="createOpeningForm">
+		Name: <input type="text" name="name"><br> 
+	<!-- 	pieceColor: <input type="text" name="pieceColor"><br>  -->
+			Tutorial Link: <input
+			type="text" name="tutorialLink"><br> Type: <input
+			type="text" name="type"><br> ImageUrl: <input
+			type="text" name="imageUrl"><br> 
+		
+			Piece Color: Black <input type="radio" id="Yes" name="pieceColor" value="Black"> 
+				
+				White <input type="radio" id="No" name="pieceColor" value="White"> <br>
+				
+		<button name="submit">Create</button>
+	</form>
+
+	<div id="update">
+	<h1>Update An Opening</h1>
+		<form name="updateOpening">
+		ID: <input type="number" name="id"><br>
+			Name: <input type="text" name="name"><br> 
+			Piece Color: Black <input type="radio" id="Yes" name="pieceColor" value="Black"> 
+				
+				White <input type="radio" id="No" name="pieceColor" value="White"> <br>
+				
+		Common Opening?  Yes <input type="radio" id="Yes" name="common" value="Yes"> 
+				
+				No <input type="radio" id="No" name="common" value="No"> <br>
+				
+			 Tutorial Link: <input
+			type="text" name="tutorialLink"><br> Type: <input
+			type="text" name="type"><br> ImageUrl: <input
+			type="text" name="imageUrl"><br> 
+		<button name="updateBtn">Update</button>
+		
+		</form>
+
+
+	</div>
+<br><br>
+<h1>Delete An Opening</h1>
+    <form name="deleteOpening"> 
+        <input type="number" placeholder="id" name="id">
+        <button name="deleteBtn">Delete</button>
+    </form>
+<div id="openingColorData"></div>
+</body>
+</html>

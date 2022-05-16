@@ -1,6 +1,7 @@
 package com.skilldistillery.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -40,5 +41,21 @@ public class OpeningServiceImpl implements OpeningService {
 			return repo.save(opening);
 		}
 		return null;
+	}
+
+	@Override
+	public List<Opening> searchPostsKeyword(String keyword) {
+		keyword = "%" + keyword + "%";
+		return repo.findByNameLike(keyword);
+	}
+	
+	@Override
+	public Opening findById(int id) {
+		Optional<Opening> op = repo.findById(id);
+		Opening f = null;
+		if(op.isPresent()) {
+			f = op.get();
+		}
+		return f;
 	}
 }

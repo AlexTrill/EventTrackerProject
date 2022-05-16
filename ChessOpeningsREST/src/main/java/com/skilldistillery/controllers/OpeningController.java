@@ -48,4 +48,20 @@ public class OpeningController {
 		serv.delete(id);
 	}
 
+	@GetMapping("posts/search/{keyword}")
+	public List<Opening> searchByPriceRange(@PathVariable String keyword) {
+		return serv.searchPostsKeyword(keyword);
+	}
+	
+	@GetMapping("openings/{id}")
+	public Opening show(HttpServletResponse resp, @PathVariable int id) {
+		Opening film = serv.findById(id);
+		if(film == null) {
+			resp.setStatus(404);
+			
+		}
+		
+		return film;
+		
+	}
 }

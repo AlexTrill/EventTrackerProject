@@ -9,5 +9,7 @@ public interface OpeningService {
 	Opening create(Opening opening);
 	Opening update(Opening opening, int id);
 	 void delete (int id);
+	List<Opening> searchPostsKeyword(String keyword);
+	Opening findById(int id);
 
 }

@@ -1,6 +1,6 @@
 # EventTrackerProject
 ## Project Description
-This is a work in progress REST application with basic CRUD functionality.
+This is a work in progress REST application with basic CRUD functionality. The database behind this project is different chess openings and their attributes.  Implements JavaScript, and through a single page allows the user to search, update, delete, or or create an opening. 
 
 ## Rest Route URI's
 -  GET http://localhost:8082/api/index (returns a all of the current chess openings in the database)

@@ -1,0 +1,10 @@
+<form>
+  <h2>Create An Opening</h2>
+  Name: <input type="text" name="name" [(ngModel)]="newOpening.name"><br>
+  Type: <input type="text" name="type" [(ngModel)]="newOpening.type"><br>
+  Piece Color: <input type="text" name="pieceColor" [(ngModel)]="newOpening.pieceColor"><br>
+  Image Url: <input type="text" name="img" [(ngModel)]="newOpening.imageUrl"><br>
+  Tutorial Link: <input type="text" name="tutorialLink" [(ngModel)]="newOpening.tutorialLink"><br>
+  <button (click)="createOpening(newOpening)">Submit</button>
+</form>
+

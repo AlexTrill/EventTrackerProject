@@ -1,0 +1,14 @@
+
+<div>
+  <form>
+    <h2>Update An Opening</h2>
+    ID: <input type="text" name="task" [(ngModel)]="editOpening.openingId"><br>
+    Name: <input type="text" name="task" [(ngModel)]="editOpening.name"><br>
+    Type: <input type="text" name="type" [(ngModel)]="editOpening.type"><br>
+    Piece Color: <input type="text" name="pieceColor" [(ngModel)]="editOpening.pieceColor"><br>
+    Image Url: <input type="text" name="pieceColor" [(ngModel)]="editOpening.imageUrl"><br>
+    Tutorial Link Url: <input type="text" name="pieceColor" [(ngModel)]="editOpening.tutorialLink"><br>
+    <button (click)="updateOpening(editOpening)">Save</button>
+
+  </form>
+  </div>

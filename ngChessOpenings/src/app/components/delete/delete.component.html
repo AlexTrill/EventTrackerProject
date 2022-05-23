@@ -1,0 +1,25 @@
+<div class="alert alert-success" role="alert" *ngIf="popup== true;">
+  <a class="close" (click)="popup = false">&times;</a>
+      <div class="content">
+
+      </div>
+  Opening Successfully Deleted
+</div>
+
+<div class="alert alert-danger" role="alert" *ngIf="popupFail== true;">
+
+  <a class="close" (click)="popupFail = false">&times;</a>
+      <div class="content">
+
+      </div>
+  Deletion Unseccessful
+</div>
+
+<form>
+  <h2>Enter The ID of The Opening You Want To Delete:</h2><br>
+  <input  type="number" name="OpeningId" id="serial" [(ngModel)]="dltOpening.openingId">
+<button class="btn btn-danger"(click)="deleteOpening(dltOpening.openingId)">Delete</button>
+</form>
+
+
+

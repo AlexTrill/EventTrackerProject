@@ -112,7 +112,7 @@ let ul = document.createElement('ul');
 	let imageUrl = document.createElement('img');
 	let common = document.createElement('li');
 
-	pieceColor.textContent = "Peice Color: " + opening.pieceColor;
+	pieceColor.textContent = "Piece Color: " + opening.pieceColor;
 	tutorialLink.textContent = "Tutorial Link: " + opening.tutorialLink;
 	tutorialLink.setAttribute('href',opening.tutorialLink);
 	

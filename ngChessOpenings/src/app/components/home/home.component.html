@@ -1,0 +1,20 @@
+<div *ngFor="let opening of openings">
+  <h3>Name: {{opening.name}}</h3>
+  <p>Type: {{opening.type}}</p>
+  <p>Piece Color: {{opening.pieceColor}}</p>
+  <p>Is Common?: {{opening.common}}</p>
+  <div *ngIf="opening.imageUrl">
+    <img [src]="opening.imageUrl"width="300" height="300">
+  </div>
+
+  <br>
+  <a href="{{opening.tutorialLink}}">{{opening.tutorialLink}}</a>
+  <hr>
+</div>
+
+
+
+
+
+
+
